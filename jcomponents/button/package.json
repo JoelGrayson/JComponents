@@ -1,0 +1,19 @@
+{
+    "name": "@jcl/button",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Button.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JoelGrayson/jcl.git"
+    },
+    "author": "Joel Grayson <joel@joelgrayson.com> (https://github.com/JoelGrayson)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JoelGrayson/jcl/issues"
+    },
+    "homepage": "https://joelgrayson.com/jcl",
+    "publishConfig": {
+        "access": "public"
+    }
+}
