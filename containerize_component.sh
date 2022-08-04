@@ -58,7 +58,8 @@ if type "jq" > /dev/null; then
             "react-dom": "^18.2.0"
         }, 
         "scripts": {
-            "rollup": "rollup -c"
+            "rollup": "rollup -c",
+            "jpublish": "npm run rollup && npm publish"
         }
     } ''' < package.json > "$temp_name"
     cat "$temp_name" > package.json

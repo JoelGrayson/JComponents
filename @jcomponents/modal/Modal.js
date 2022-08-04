@@ -6,7 +6,7 @@ export default function Modal({open, setOpen, children, ...props}) {
         { open && (
             <>
                 <div id='modal-background' onClick={_=>setOpen(false)}
-                    className={{
+                    style={{
                         position: "fixed",
                         top: 0,
                         left: 0,
@@ -17,7 +17,7 @@ export default function Modal({open, setOpen, children, ...props}) {
                     }}
                 /> {/* Clicking outside of a modal closes it */}
                 <div id='modal-container'
-                    className={{
+                    style={{
                         position: "absolute",
                         top: 0,
                         left: 0,
@@ -28,14 +28,15 @@ export default function Modal({open, setOpen, children, ...props}) {
                         alignItems: "center"
                     }}
                 >
-                    <div id='settings-modal' className={{
+                    <div id='settings-modal' style={{
                         position: "fixed",
                         width: "80%",
-                        maxWidth: "500px",
+                        maxWidth: props.maxWidth || "500px",
                         height: "fit-content",
                         backgroundColor: "white",
                         zIndex: 2,
                         padding: "30px",
+                        paddingBottom: "40px",
                         borderRadius: "1.4rem"
                     }}>
                         <span className='icon-close' onClick={_=>setOpen(false)} />
