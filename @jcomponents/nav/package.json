@@ -1,6 +1,6 @@
 {
     "name": "@jcomponents/nav",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "./dist.js",
     "module": "./dist.mjs",
@@ -18,7 +18,8 @@
         "access": "public"
     },
     "scripts": {
-        "rollup": "rollup -c"
+        "rollup": "rollup -c",
+        "jpublish": "npm run rollup && npm publish"
     },
     "peerDependencies": {
         "react": "^18.2.0",
@@ -36,6 +37,6 @@
         "rollup-plugin-terser": "^7.0.2"
     },
     "dependencies": {
-        "@jcomponents/button": "^1.0.3"
+        "@jcomponents/button": "^1.0.4"
     }
 }
