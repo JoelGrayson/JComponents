@@ -1,18 +1,18 @@
 {
-    "name": "@jcl/link",
+    "name": "@jcomponents/container",
     "version": "1.0.0",
     "description": "",
-    "main": "Link.js",
+    "main": "Container.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/JoelGrayson/jcl.git"
+        "url": "git+https://github.com/JoelGrayson/jcomponents.git"
     },
     "author": "Joel Grayson <joel@joelgrayson.com> (https://github.com/JoelGrayson)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/JoelGrayson/jcl/issues"
+        "url": "https://github.com/JoelGrayson/jcomponents/issues"
     },
-    "homepage": "https://joelgrayson.com/jcl",
+    "homepage": "https://joelgrayson.com/jcomponents",
     "publishConfig": {
         "access": "public"
     }
