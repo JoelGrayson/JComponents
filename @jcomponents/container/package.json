@@ -2,7 +2,7 @@
     "name": "@jcomponents/container",
     "version": "1.0.0",
     "description": "",
-    "main": "Container.js",
+    "main": "./dist.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/JoelGrayson/jcomponents.git"
@@ -15,5 +15,25 @@
     "homepage": "https://joelgrayson.com/jcomponents",
     "publishConfig": {
         "access": "public"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.18.6",
+        "@rollup/plugin-babel": "^5.3.1",
+        "@rollup/plugin-commonjs": "^22.0.1",
+        "@rollup/plugin-node-resolve": "^13.3.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-terser": "^7.0.2"
+    },
+    "module": "./dist.mjs",
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "scripts": {
+        "rollup": "rollup -c",
+        "jpublish": "npm run rollup && npm publish"
     }
 }

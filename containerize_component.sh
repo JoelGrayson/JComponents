@@ -52,7 +52,7 @@ if type "jq" > /dev/null; then
     temp_name="$(mktemp)"
     jq '''. + {
             "main": "./dist.js",
-            "module": "./dist.ejs",
+            "module": "./dist.mjs",
             "peerDependencies": {
             "react": "^18.2.0",
             "react-dom": "^18.2.0"

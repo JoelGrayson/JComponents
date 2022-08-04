@@ -3,7 +3,7 @@
     "version": "1.1.3",
     "description": "",
     "main": "./dist.js",
-    "module": "./dist.ejs",
+    "module": "./dist.mjs",
     "scripts": {
         "rollup": "rollup -c"
     },

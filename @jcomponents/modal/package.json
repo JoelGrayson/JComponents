@@ -5,14 +5,14 @@
     "main": "./dist.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/JoelGrayson/jcl.git"
+        "url": "git+https://github.com/JoelGrayson/jcomponents.git"
     },
     "author": "Joel Grayson <joel@joelgrayson.com> (https://github.com/JoelGrayson)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/JoelGrayson/jcl/issues"
+        "url": "https://github.com/JoelGrayson/jcomponents/issues"
     },
-    "homepage": "https://joelgrayson.com/jcl",
+    "homepage": "https://joelgrayson.com/jcomponents",
     "publishConfig": {
         "access": "public"
     },
@@ -28,7 +28,7 @@
         "rollup-plugin-postcss": "^4.0.2",
         "rollup-plugin-terser": "^7.0.2"
     },
-    "module": "./dist.ejs",
+    "module": "./dist.mjs",
     "peerDependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
