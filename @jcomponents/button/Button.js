@@ -4,14 +4,14 @@ import './jcomponent-button.css';
 export default function Button({children, color, ...props}) {
     // Color from the j defaults or any CSS valid color
     const validJColors=['jred', 'jyellow', 'jgreen', 'jblue'];
-    if (validJColors.includes(color.toLowerCase()))
-        return (<button className={`jcomponent-button ${color}`} {...props}>
-            {children}
-        </button>);
-    else
-        return (<button className='jcomponent-button' style={{
-            backgroundColor: color
-        }} {...props}>
-            {children}
-        </button>);
+    const validColor=validJColors.includes(color.toLowerCase());
+    return (<button
+        className={validColor ? `jcomponent-button ${color}` : 'jcomponent-button'}
+        style={{
+            backgroundColor: validColor ? '' : color //if not valid Color, then use CSS color
+        }}
+        {...props}
+    >
+        {children}
+    </button>);
 }

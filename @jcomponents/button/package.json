@@ -1,6 +1,6 @@
 {
     "name": "@jcomponents/button",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "description": "",
     "main": "./dist.js",
     "module": "./dist.mjs",
@@ -9,7 +9,8 @@
         "url": "git+https://github.com/JoelGrayson/jcomponents.git"
     },
     "scripts": {
-        "rollup": "rollup -c"
+        "rollup": "rollup -c",
+        "jpublish": "npm run rollup && npm publish"
     },
     "author": "Joel Grayson <joel@joelgrayson.com> (https://github.com/JoelGrayson)",
     "license": "MIT",
