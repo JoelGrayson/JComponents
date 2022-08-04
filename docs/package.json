@@ -1,0 +1,25 @@
+{
+  "name": "jcomponents-documentation",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@jcomponents/button": "^1.0.4",
+    "@jcomponents/container": "^1.0.0",
+    "@jcomponents/header": "^1.1.3",
+    "@jcomponents/modal": "^1.0.6",
+    "@jcomponents/nav": "^1.0.1",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4"
+  }
+}
