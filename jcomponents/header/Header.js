@@ -1,4 +1,6 @@
-const tinycolor=require("tinycolor2");
+import React from 'react';
+import tinycolor from 'tinycolor2';
+// const tinycolor=require('tinycolor2');
 
 export default function Header(props) {
     let maxWidth=props.maxWidth || 800;
