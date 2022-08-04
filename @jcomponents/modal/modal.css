@@ -20,7 +20,7 @@
 }
 
 .settings-modal {
-    position: fixed;
+    position: relative;
     width: 80%;
     height: fit-content;
     background-color: white;
@@ -30,6 +30,10 @@
     border-radius: 1.4rem;
 }
 
-.settings-modal:hover {
-    cursor: grab;
+.settings-modal:hover { cursor: grab; }
+.settings-modal:active { cursor: grabbing; }
+
+.settings-modal-content {
+    cursor: default;
 }
+
