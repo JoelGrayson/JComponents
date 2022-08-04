@@ -25,7 +25,7 @@
 }
 
 /* Colors */
-.jcomponent-button.btn-red   { background-color: #ff8f8f; }
-.jcomponent-button.btn-yellow{ background-color: #ffd472; }
-.jcomponent-button.btn-green { background-color: #90ee90; }
-.jcomponent-button.btn-blue  { background-color: #aed8fc; }
+.jcomponent-button.jred   { background-color: #ff8f8f; }
+.jcomponent-button.jyellow{ background-color: #ffd472; }
+.jcomponent-button.jgreen { background-color: #90ee90; }
+.jcomponent-button.jblue  { background-color: #aed8fc; }
