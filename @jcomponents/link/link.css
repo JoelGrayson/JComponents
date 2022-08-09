@@ -1,0 +1,22 @@
+.jcomponents-link__name {
+    pointer-events: none;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: #333;
+    color: white;
+}
+
+.jcomponents-link a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.jcomponents-link a:hover { /* gradient text onHover */
+    color: #fa00f2; /* backup for browsers not supporting text gradient */
+    background: -webkit-linear-gradient(45deg, #fa00f2 0%, #000acd 60%, #00299d 100%); /* blue/purple gradient text */
+    font-family: AvenirMedium;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline; /* does not work because of -webkit-background-clip */
+}

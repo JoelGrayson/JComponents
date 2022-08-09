@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # About: run this script to quickly turn a single file into a React component
-# Example: ./containerize_component.sh ./jcomponents/button Button
+# Example: ./containerize_component.sh ./jcomponents/button Button.js
 
 # Arguments
 u_path="$1"
