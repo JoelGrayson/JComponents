@@ -9,16 +9,22 @@ header.jcomponents-header {
     align-items: center;
 }
 
-header.jcomponents-header div {
+header.jcomponents-header>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: calc(100% - 70px); /* 35px horizontal padding */
 }
 
-header.jcomponents-header div *:first-child, /* Left */
-header.jcomponents-header div *:last-child { /* Right */
+header.jcomponents-header>div>*:first-child, /* Both */
+header.jcomponents-header>div>*:last-child {
     display: flex;
     flex-direction: row;
     gap: 3px;
+}
+header.jcomponents-header>div>*:first-child { /* Left */
+    justify-content: left;
+}
+header.jcomponents-header>div>*:last-child { /* Right */
+    justify-content: right;
 }
