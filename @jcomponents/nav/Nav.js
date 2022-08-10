@@ -16,8 +16,8 @@ export function Nav({children}) {
 export function NavItem({children, href='#'}) {
     const [isCurrentPage, setIsCurrentPage] = useState(false);
     
-    useEffect(() => {
-        if (typeof window!=="undefined")
+    useEffect(()=>{
+        if (typeof window!=='undefined')
             setIsCurrentPage(href===window.location.pathname);
     }, []);
     
