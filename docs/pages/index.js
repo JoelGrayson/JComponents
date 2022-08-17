@@ -1,26 +1,16 @@
-import Header from '@jcomponents/header';
-import Container from '@jcomponents/container';
-import { Nav, NavItem } from '@jcomponents/nav';
+import Page from '../components/Page';
 
 export default function Home() {
-    return (<>
-        <Header color='#a9ceff'>
-            <div> {/* Left */}
-                <img src='/logo.png' width='80px' height='80px' />
-            </div>
-            <div> {/* Right */}
-                <Nav>
-                    <NavItem href='/'>Home</NavItem>
-                    <NavItem href='/about'>About</NavItem>
-                    <NavItem href='/contact'>Contact</NavItem>
-                </Nav>
-            </div>
-        </Header>
+    return (<Page>
+        <h1 style={{textAlign: 'center'}}>JComponents</h1>
+        <p>Easily integrate custom-made components into your React projects.</p>
+        <p>This page is a demo of all the components</p>
         
-        <Container>
-            <h1 style={{textAlign: 'center'}}>JComponents</h1>
-            <p>Easily integrate custom-made components into your React projects.</p>
-            <p>Below is a demo:</p>
-        </Container>
-    </>);
+        <br/>
+        <h3>Contribute</h3>
+        <ul>
+            <li>Source code: <a href='https://github.com/JoelGrayson/JComponents' target='_blank'>github.com/JoelGrayson/JComponents</a></li>
+            <li>Issue tracker: <a href="https://github.com/JoelGrayson/JComponents/issues" target='_blank'>github.com/JoelGrayson/JComponents/issues</a></li>
+        </ul>
+    </Page>);
 }

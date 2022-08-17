@@ -1,3 +1,45 @@
+/* <Tailwind> */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* </> */
+
+
+/* <Defaults> */
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1 { font-size: 36px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+ul:not(.unstyled) {
+    padding-left: 2rem;
+}
+ul:not(.unstyled) li {
+    list-style-type: disc;
+}
+
+p {
+  line-height: 1.7;
+}
+
+code, code.light { /* light code like notion */
+    font-family: monospace;
+    padding: .4ch 0;
+    color: #eb5757;
+    background-color: #ededeb;
+    border-radius: .6ch;
+}
+code.dark { /* dark code like sublime */
+    background-color: #111;
+    color: #ff8989;
+}
+
+/* </> */
+
+
 html,
 body {
   padding: 0;
@@ -7,20 +49,14 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: #165590;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(77, 155, 227);
 }
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
