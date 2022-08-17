@@ -1,4 +1,5 @@
 import Page from '../../components/Page';
+import Link from '@jcomponents/link';
 import Code from '../../components/Code';
 
 export default function LinkDoc() {
@@ -11,7 +12,10 @@ export default function LinkDoc() {
             <div> {/* Left */}
                 <h3>Description</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium voluptate doloribus vel eaque a amet veniam repudiandae at facilis eum aliquid doloremque quo voluptatem, iste molestiae asperiores quisquam, aspernatur officiis voluptatibus porro minus nobis. Numquam saepe magnam exercitationem iste. Obcaecati aspernatur minima saepe incidunt est, sapiente illum voluptas corporis?
+                    <b><i>No configuration necessary.</i></b>
+                    <br/>
+                    Want a fancy link on your site, but don't want to have to configure it like mad? This package can be used just like &lt;a href=""&gt;&lt;/a&gt;, but it shows a popup modal of where the address is and is an aesthetically pleasing rainbow when hovered.
+                    <br/><br/>
                 </p>
             </div>
             <div> {/* Right */}
@@ -29,19 +33,14 @@ export default function LinkDoc() {
 
         <h3>Demo</h3>
         <Code>{`
-<Nav>
-    <NavItem Link={Link} href='/'>All</NavItem>
-    <NavItem Link={Link} href='/header'>Header</NavItem>
-    <NavItem Link={Link} href='/modal'>Modal</NavItem>
-    <NavItem Link={Link} href='/button'>Button</NavItem>
-    <NavItem Link={Link} href='/link'>Link</NavItem>
-    <NavItem Link={Link} href='/nav'>Nav</NavItem>
-    <NavItem Link={Link} href='/container'>Container</NavItem>
-</Nav>
+import Link from '@jcomponents/link';
+
+<Link href='https://www.joelgrayson.com'>Visit my site</Link>
         `}</Code>
         
         <div>
-            <p>The rendered result is the header you see at the top of the page</p>
+            <p>Rendered result</p>
+            <Link href='https://www.joelgrayson.com'>Visit my site</Link>
         </div>
     </Page>);
 }

@@ -11,7 +11,8 @@ export default function HeaderDoc() {
             <div> {/* Left */}
                 <h3>Description</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium voluptate doloribus vel eaque a amet veniam repudiandae at facilis eum aliquid doloremque quo voluptatem, iste molestiae asperiores quisquam, aspernatur officiis voluptatibus porro minus nobis. Numquam saepe magnam exercitationem iste. Obcaecati aspernatur minima saepe incidunt est, sapiente illum voluptas corporis?
+                    Left and right sides.
+                    For example, you can put your website's icon on the left and the navigation on the right.
                 </p>
             </div>
             <div> {/* Right */}
@@ -29,15 +30,14 @@ export default function HeaderDoc() {
 
         <h3>Demo</h3>
         <Code>{`
-<Nav>
-    <NavItem Link={Link} href='/'>All</NavItem>
-    <NavItem Link={Link} href='/header'>Header</NavItem>
-    <NavItem Link={Link} href='/modal'>Modal</NavItem>
-    <NavItem Link={Link} href='/button'>Button</NavItem>
-    <NavItem Link={Link} href='/link'>Link</NavItem>
-    <NavItem Link={Link} href='/nav'>Nav</NavItem>
-    <NavItem Link={Link} href='/container'>Container</NavItem>
-</Nav>
+<Header>
+    <div> {/* Left */}
+
+    </div>
+    <div> {/* Right */}
+
+    </div>
+</Header>
         `}</Code>
         
         <div>

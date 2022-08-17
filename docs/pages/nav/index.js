@@ -11,7 +11,9 @@ export default function NavDoc() {
             <div> {/* Left */}
                 <h3>Description</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium voluptate doloribus vel eaque a amet veniam repudiandae at facilis eum aliquid doloremque quo voluptatem, iste molestiae asperiores quisquam, aspernatur officiis voluptatibus porro minus nobis. Numquam saepe magnam exercitationem iste. Obcaecati aspernatur minima saepe incidunt est, sapiente illum voluptas corporis?
+                    The Nav &amp; NavItem element can be used to quickly &amp; easily create headers that update to show which page you are on.
+                    <br/><br/>
+                    If used in next.js, you can pass in next's Link from next/link into the Link property of NavItem. Otherwise, if you are just in plain react, skip this step.
                 </p>
             </div>
             <div> {/* Right */}
@@ -32,13 +34,13 @@ export default function NavDoc() {
 import { Nav, NavItem } from '@jcomponents/nav';
 
 <Nav>
-    <NavItem Link={Link} href='/'>All</NavItem>
-    <NavItem Link={Link} href='/header'>Header</NavItem>
-    <NavItem Link={Link} href='/modal'>Modal</NavItem>
-    <NavItem Link={Link} href='/button'>Button</NavItem>
-    <NavItem Link={Link} href='/link'>Link</NavItem>
-    <NavItem Link={Link} href='/nav'>Nav</NavItem>
-    <NavItem Link={Link} href='/container'>Container</NavItem>
+    <NavItem href='/'>All</NavItem>
+    <NavItem href='/header'>Header</NavItem>
+    <NavItem href='/modal'>Modal</NavItem>
+    <NavItem href='/button'>Button</NavItem>
+    <NavItem href='/link'>Link</NavItem>
+    <NavItem href='/nav'>Nav</NavItem>
+    <NavItem href='/container'>Container</NavItem>
 </Nav>
         `}</Code>
         

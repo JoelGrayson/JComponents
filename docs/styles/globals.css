@@ -52,14 +52,14 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
+/* a {
     color: #165590;
     text-decoration: underline;
 }
 
 a:hover {
     color: rgb(77, 155, 227);
-}
+} */
 
 * {
   box-sizing: border-box;

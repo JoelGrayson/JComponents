@@ -29,15 +29,9 @@ export default function ModalDoc() {
 
         <h3>Demo</h3>
         <Code>{`
-<Nav>
-    <NavItem Link={Link} href='/'>All</NavItem>
-    <NavItem Link={Link} href='/header'>Header</NavItem>
-    <NavItem Link={Link} href='/modal'>Modal</NavItem>
-    <NavItem Link={Link} href='/button'>Button</NavItem>
-    <NavItem Link={Link} href='/link'>Link</NavItem>
-    <NavItem Link={Link} href='/nav'>Nav</NavItem>
-    <NavItem Link={Link} href='/container'>Container</NavItem>
-</Nav>
+<Modal open={open} setOpen={setOpen}>
+    {contents}
+</Modal>
         `}</Code>
         
         <div>

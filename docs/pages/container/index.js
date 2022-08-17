@@ -11,7 +11,7 @@ export default function ContainerDoc() {
             <div> {/* Left */}
                 <h3>Description</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium voluptate doloribus vel eaque a amet veniam repudiandae at facilis eum aliquid doloremque quo voluptatem, iste molestiae asperiores quisquam, aspernatur officiis voluptatibus porro minus nobis. Numquam saepe magnam exercitationem iste. Obcaecati aspernatur minima saepe incidunt est, sapiente illum voluptas corporis?
+                    Choose max-width.
                 </p>
             </div>
             <div> {/* Right */}
