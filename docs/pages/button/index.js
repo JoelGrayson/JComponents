@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Page from '../../components/Page';
 import Button from '@jcomponents/button';
+import Code from '../../components/Code';
 import { SketchPicker } from 'react-color';
 
 export default function ButtonDoc() {
@@ -32,14 +33,14 @@ export default function ButtonDoc() {
         <br/>
 
         <h3>Demo</h3>
-        <code style={{whiteSpace: 'pre'}}>{`
+        <Code>{`
 <Button>Default</Button>
 <Button color='#f9c44d'>Custom Color #f9c44d</Button>
 <Button color='jred'>JRed</Button>
 <Button color='jyellow'>JYellow</Button>
 <Button color='jgreen'>JGreen</Button>
 <Button color='jblue'>JBlue</Button>
-        `.trim()}</code>
+        `}</Code>
         
         <div>
             <p>Rendered result:</p>

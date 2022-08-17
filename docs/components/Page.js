@@ -7,7 +7,9 @@ export default function Home({children}) {
     return (<>
         <Header color='#a9ceff'>
             <div> {/* Left */}
-                <img src='/logo.png' width='80px' height='80px' />
+                <Link href='/'><a>
+                    <img src='/logo.png' width='80px' height='80px' />
+                </a></Link>
             </div>
             <div> {/* Right */}
                 <Nav>

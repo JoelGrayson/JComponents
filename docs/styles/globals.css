@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css');
+
 /* <Tailwind> */
 @tailwind base;
 @tailwind components;
@@ -25,17 +27,19 @@ p {
   line-height: 1.7;
 }
 
-code, code.light { /* light code like notion */
+/*
+code, code.light { /* light code like notion 
     font-family: monospace;
     padding: .4ch 0;
     color: #eb5757;
     background-color: #ededeb;
     border-radius: .6ch;
 }
-code.dark { /* dark code like sublime */
+code.dark { /* dark code like sublime 
     background-color: #111;
     color: #ff8989;
 }
+*/
 
 /* </> */
 

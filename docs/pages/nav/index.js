@@ -1,4 +1,5 @@
 import Page from '../../components/Page';
+import Code from '../../components/Code';
 
 export default function NavDoc() {
     return (<Page>
@@ -27,7 +28,9 @@ export default function NavDoc() {
         <br/>
 
         <h3>Demo</h3>
-        <code style={{whiteSpace: 'pre'}}>{`
+        <Code>{` 
+import { Nav, NavItem } from '@jcomponents/nav';
+
 <Nav>
     <NavItem Link={Link} href='/'>All</NavItem>
     <NavItem Link={Link} href='/header'>Header</NavItem>
@@ -37,7 +40,7 @@ export default function NavDoc() {
     <NavItem Link={Link} href='/nav'>Nav</NavItem>
     <NavItem Link={Link} href='/container'>Container</NavItem>
 </Nav>
-        `.trim()}</code>
+        `}</Code>
         
         <div>
             <p>The rendered result is the header you see at the top of the page</p>
