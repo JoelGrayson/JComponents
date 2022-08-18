@@ -31,16 +31,16 @@ export default function NavDoc() {
 
         <h3>Demo</h3>
         <Code>{` 
-import { Nav, NavItem } from '@jcomponents/nav';
+import Nav from '@jcomponents/nav';
 
 <Nav>
-    <NavItem href='/'>All</NavItem>
-    <NavItem href='/header'>Header</NavItem>
-    <NavItem href='/modal'>Modal</NavItem>
-    <NavItem href='/button'>Button</NavItem>
-    <NavItem href='/link'>Link</NavItem>
-    <NavItem href='/nav'>Nav</NavItem>
-    <NavItem href='/container'>Container</NavItem>
+    <Nav.Item href='/'>All</Nav.Item>
+    <Nav.Item href='/header'>Header</Nav.Item>
+    <Nav.Item href='/modal'>Modal</Nav.Item>
+    <Nav.Item href='/button'>Button</Nav.Item>
+    <Nav.Item href='/link'>Link</Nav.Item>
+    <Nav.Item href='/nav'>Nav</Nav.Item>
+    <Nav.Item href='/container'>Container</Nav.Item>
 </Nav>
         `}</Code>
         

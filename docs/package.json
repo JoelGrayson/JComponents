@@ -14,7 +14,7 @@
     "@jcomponents/header": "^1.1.3",
     "@jcomponents/link": "^1.0.0",
     "@jcomponents/modal": "^1.0.6",
-    "@jcomponents/nav": "^1.0.3",
+    "@jcomponents/nav": "^1.1.4",
     "next": "12.2.4",
     "react": "18.2.0",
     "react-code-blocks": "^0.0.9-0",

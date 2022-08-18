@@ -1,6 +1,6 @@
 import Header from '@jcomponents/header';
 import Container from '@jcomponents/container';
-import { Nav, NavItem } from '@jcomponents/nav';
+import Nav from '@jcomponents/nav';
 import Link from 'next/link';
 
 export default function Home({children}) {
@@ -13,13 +13,13 @@ export default function Home({children}) {
             </div>
             <div> {/* Right */}
                 <Nav>
-                    <NavItem Link={Link} href='/'>All</NavItem>
-                    <NavItem Link={Link} href='/header'>Header</NavItem>
-                    <NavItem Link={Link} href='/modal'>Modal</NavItem>
-                    <NavItem Link={Link} href='/button'>Button</NavItem>
-                    <NavItem Link={Link} href='/link'>Link</NavItem>
-                    <NavItem Link={Link} href='/nav'>Nav</NavItem>
-                    <NavItem Link={Link} href='/container'>Container</NavItem>
+                    <Nav.Item Link={Link} href='/'>All</Nav.Item>
+                    <Nav.Item Link={Link} href='/header'>Header</Nav.Item>
+                    <Nav.Item Link={Link} href='/modal'>Modal</Nav.Item>
+                    <Nav.Item Link={Link} href='/button'>Button</Nav.Item>
+                    <Nav.Item Link={Link} href='/link'>Link</Nav.Item>
+                    <Nav.Item Link={Link} href='/nav'>Nav</Nav.Item>
+                    <Nav.Item Link={Link} href='/container'>Container</Nav.Item>
                 </Nav>
             </div>
         </Header>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@jcomponents/button';
 
-export function Nav({gap=4, children, ...props}) {
+function Nav({gap=4, children, ...props}) {
     return (<nav>
         <ul style={{
             display: 'flex',
@@ -13,7 +13,7 @@ export function Nav({gap=4, children, ...props}) {
     </nav>);
 }
 
-export function NavItem({children, href='#', Link=null}) {
+function NavItem({children, href='#', Link=null}) {
     const [isCurrentPage, setIsCurrentPage] = useState(false);
     
     useEffect(()=>{
@@ -34,3 +34,14 @@ export function NavItem({children, href='#', Link=null}) {
             </a></Link>
         </li>);
 }
+
+
+Nav.Item=NavItem;
+export default Nav;
+
+/*
+<Nav>
+    <Nav.Item>Hi</Nav.Item>
+    ...
+</Nav>
+*/
