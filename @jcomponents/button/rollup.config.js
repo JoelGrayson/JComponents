@@ -7,7 +7,7 @@ import postcss from 'rollup-plugin-postcss';
 
 export default [
     {
-        input: 'Button.js',
+        input: 'Button.jsx',
         output: [
             {
                 file: './dist.mjs',
