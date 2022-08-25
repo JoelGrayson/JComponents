@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@jcomponents/button';
 
-function Nav({gap=4, children, ...props}) {
+function Nav({gap=4, ...props}) {
     return (<nav>
         <ul style={{
             display: 'flex',
             padding: 0,
             gap
         }}>
-            {children}
+            {props.children}
         </ul>
     </nav>);
 }
 
-function NavItem({children, href='#', Link=null}) {
+function NavItem({href='#', Link=null}) {
     const [isCurrentPage, setIsCurrentPage] = useState(false);
     
     useEffect(()=>{
@@ -24,13 +24,13 @@ function NavItem({children, href='#', Link=null}) {
     if (Link==null)
         return (<li style={{padding: 0, listStyleType: 'none'}}>
             <a href={href}>
-                <Button color={isCurrentPage ? 'jyellow' : ''}>{children}</Button>
+                <Button color={isCurrentPage ? 'jyellow' : ''}>{props.children}</Button>
             </a>
         </li>);
     else
         return (<li style={{padding: 0, listStyleType: 'none'}}>
             <Link href={href}><a>
-                <Button color={isCurrentPage ? 'jyellow' : ''}>{children}</Button>
+                <Button color={isCurrentPage ? 'jyellow' : ''}>{props.children}</Button>
             </a></Link>
         </li>);
 }
