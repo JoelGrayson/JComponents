@@ -3,5 +3,5 @@ declare module '@jcomponents/button' {
         children: any;
         color: any;
         [x: string]: any;
-    }): React.Component<React.HTMLAttributes<HTMLButtonElement>, {}>
+    }): JSX.Element
 }
