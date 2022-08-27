@@ -7,7 +7,7 @@ import postcss from 'rollup-plugin-postcss';
 
 export default [
     {
-        input: './Header.js',
+        input: './Header.jsx',
         output: [
             {
                 file: './dist.mjs',
