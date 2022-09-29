@@ -1,7 +1,16 @@
 declare module '@jcomponents/button' {
-    export default function Button({ children, color, ...props }: {
+    type ButtonT=(props: {
         children?: any;
         color?: any;
-        [x: string]: any;
-    }): JSX.Element
+        [key: string]: any;
+    }) => JSX.Element;
+    
+    const Button: ButtonT;
+    export default Button;
+    export const Btn: ButtonT;
+    export const ButtonIcon: ButtonT;
+    export const BtnIcon: ButtonT;
+
+    export const ButtonIconStyle: React.CSSProperties;
+    export const BtnIconStyle: React.CSSProperties;
 }
