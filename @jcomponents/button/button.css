@@ -9,6 +9,7 @@
     top: 0;
     transition: top;
     transition-duration: .1s;
+    cursor: pointer;
 }
 
 .jcomponents__button:hover {
@@ -53,6 +54,10 @@
 
 .jcomponents__button__puffy:hover {
     background-color: #0F63FF;
+}
+
+.jcomponents__button__puffy:active { /* cursor clicked */
+    background-color: #2469ff;
 }
 
 .jcomponents__button__puffy:disabled {

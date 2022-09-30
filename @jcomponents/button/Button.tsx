@@ -1,5 +1,5 @@
-import React from 'react';
-import { Component, CSSProperties } from 'react';
+import React, { Component, CSSProperties } from 'react';
+import PuffyButton from './PuffyButton';
 import './button.css';
 
 type ButtonProps={
@@ -7,6 +7,9 @@ type ButtonProps={
     color?: any;
     [key: string]: any;
 };
+
+type jcolor='jred' | 'jyellow' | 'jgreen' | 'jblue';
+const validJColors: jcolor[]=['jred', 'jyellow', 'jgreen', 'jblue'];
 
 export default class Button extends Component<ButtonProps> {
     constructor(props) {
@@ -31,10 +34,9 @@ export default class Button extends Component<ButtonProps> {
         })();
 
         // Color from the j defaults or any CSS valid color
-        const validJColors: string[]=['jred', 'jyellow', 'jgreen', 'jblue'];
-        const validColor: boolean=this.props.color && validJColors.includes(this.props.color.toLowerCase());
+        const validJColor: boolean=this.props.color && validJColors.includes(this.props.color.toLowerCase());
 
-        const style: CSSProperties=validColor ? {} : { backgroundColor: this.props.color }; //use CSS color if color is not valid color
+        const style: CSSProperties=validJColor ? {} : { backgroundColor: this.props.color }; //use CSS color if color is not validJColor
         if (hasButtonIcon) {
             style.display='inline-flex';
             style.alignItems='center';
@@ -44,21 +46,15 @@ export default class Button extends Component<ButtonProps> {
 
         return (<button
             style={style}
-            className={validColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button'}
+            className={validJColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button'}
             {...this.props}
         >
             {this.props.children}
         </button>);
     }
-    
+
     static Icon: string='jcomponents__button__icon'; // Button.Icon is a className
 
     // <Button.Puffy> is an element
-    static Puffy: (props: {
-        children?: any;
-        color?: any;
-        [key: string]: any;
-    }) => JSX.Element=({children, ...props})=>{
-        return <button className='jcomponents__button__puffy' {...props}>{children}</button>;
-    }
+    static Puffy=PuffyButton;
 }

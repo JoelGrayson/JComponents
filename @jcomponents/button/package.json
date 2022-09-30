@@ -1,6 +1,6 @@
 {
     "name": "@jcomponents/button",
-    "version": "1.2.2",
+    "version": "1.2.6",
     "description": "",
     "main": "./dist.js",
     "module": "./dist.mjs",
@@ -39,7 +39,9 @@
     "dependencies": {
         "@rollup/plugin-typescript": "^8.5.0",
         "@types/react": "^18.0.21",
+        "@types/tinycolor2": "^1.4.3",
         "rollup-plugin-postcss": "^4.0.2",
+        "tinycolor2": "^1.4.2",
         "tslib": "^2.4.0"
     }
 }
