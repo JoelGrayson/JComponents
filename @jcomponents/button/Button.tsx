@@ -45,9 +45,9 @@ export default class Button extends Component<ButtonProps> {
         }
 
         return (<button
-            style={style}
-            className={validJColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button'}
             {...this.props}
+            style={{...(this.props?.style), ...style}} //allow user to input styles
+            className={validJColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button'}
         >
             {this.props.children}
         </button>);
