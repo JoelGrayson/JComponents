@@ -32,9 +32,15 @@
 .jcomponents__button.jblue  { background-color: #aed8fc; }
 
 
-/*# Puffy Button */
+/*# Button Icon */
+.jcomponents__button__icon {
+    height: 40px;
+    max-width: 100px;
+}
 
-.jcomponents-puffy-button {
+
+/*# Puffy Button */
+.jcomponents__button__puffy {
     background-color: #1a2df3;
     color: #fff;
     border-width: 0;
@@ -45,11 +51,10 @@
     font-weight: 600;
 }
 
-.jcomponents-puffy-button:hover {
+.jcomponents__button__puffy:hover {
     background-color: #0F63FF;
 }
 
-.jcomponents-puffy-button:disabled {
+.jcomponents__button__puffy:disabled {
     background-color: rgb(144, 144, 144, 0.37);
 }
-

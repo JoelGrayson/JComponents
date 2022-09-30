@@ -53,4 +53,12 @@ export default class Button extends Component<ButtonProps> {
     
     static Icon: string='jcomponents__button__icon'; // Button.Icon is a className
 
+    // <Button.Puffy> is an element
+    static Puffy: (props: {
+        children?: any;
+        color?: any;
+        [key: string]: any;
+    }) => JSX.Element=({children, ...props})=>{
+        return <button className='jcomponents__button__puffy' {...props}>{children}</button>;
+    }
 }
