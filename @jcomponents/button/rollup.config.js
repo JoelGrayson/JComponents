@@ -8,7 +8,7 @@ import postcss from 'rollup-plugin-postcss';
 
 export default [
     {
-        input: 'Button.jsx',
+        input: 'Button.tsx',
         output: [
             {
                 file: './dist.mjs',
@@ -24,7 +24,7 @@ export default [
             postcss({
                 minimize: true
             }),
-            typescript(),
+            typescript({allowSyntheticDefaultImports: true, jsx: 'react-jsx'}),
             babel({
                 exclude: 'node_modules',
                 presets: ['@babel/preset-react'],

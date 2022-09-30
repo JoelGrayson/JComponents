@@ -1,5 +1,5 @@
 /*# Button */
-.jcomponent-button {
+.jcomponents__button {
     border: 1.1px solid #000;
     border-radius: 3px;
     padding: 5px 10px;
@@ -11,25 +11,25 @@
     transition-duration: .1s;
 }
 
-.jcomponent-button:hover {
+.jcomponents__button:hover {
     outline: 2.1px solid #111;
     outline-offset: -2px;
     filter: brightness(0.85) saturate(1.4);
 }
-.jcomponent-button:active {
+.jcomponents__button:active {
     border-radius: 2px;
     top: 1.1px;
     filter: brightness(0.8) saturate(1.4);
 }
-.jcomponent-button:disabled {
+.jcomponents__button:disabled {
     outline: none;
 }
 
 /* Colors */
-.jcomponent-button.jred   { background-color: #ff8f8f; }
-.jcomponent-button.jyellow{ background-color: #ffd472; }
-.jcomponent-button.jgreen { background-color: #90ee90; }
-.jcomponent-button.jblue  { background-color: #aed8fc; }
+.jcomponents__button.jred   { background-color: #ff8f8f; }
+.jcomponents__button.jyellow{ background-color: #ffd472; }
+.jcomponents__button.jgreen { background-color: #90ee90; }
+.jcomponents__button.jblue  { background-color: #aed8fc; }
 
 
 /*# Puffy Button */

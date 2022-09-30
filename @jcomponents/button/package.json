@@ -1,16 +1,16 @@
 {
     "name": "@jcomponents/button",
-    "version": "1.1.6",
+    "version": "1.2.2",
     "description": "",
     "main": "./dist.js",
     "module": "./dist.mjs",
-    "types": "./types/Button.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/JoelGrayson/jcomponents.git"
     },
     "scripts": {
         "rollup": "rollup -c",
+        "build": "rollup -c",
         "jpublish": "npm run rollup && npm publish"
     },
     "author": "Joel Grayson <joel@joelgrayson.com> (https://github.com/JoelGrayson)",
@@ -38,6 +38,8 @@
     },
     "dependencies": {
         "@rollup/plugin-typescript": "^8.5.0",
-        "rollup-plugin-postcss": "^4.0.2"
+        "@types/react": "^18.0.21",
+        "rollup-plugin-postcss": "^4.0.2",
+        "tslib": "^2.4.0"
     }
 }
