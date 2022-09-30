@@ -1,3 +1,4 @@
+import typescript from '@rollup/plugin-typescript';
 import babel from 'rollup-plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
@@ -23,9 +24,12 @@ export default [
             postcss({
                 minimize: true
             }),
+            typescript(),
             babel({
                 exclude: 'node_modules',
-                presets: ['@babel/preset-react' ]
+                presets: ['@babel/preset-react'],
+                extensions: ['.js', '.jsx', '.es6', '.es', '.mjs',
+                    '.ts', '.tsx']
             }),
             external(),
             resolve(),

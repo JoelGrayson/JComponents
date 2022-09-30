@@ -37,6 +37,7 @@
         "react-dom": "^18.2.0"
     },
     "dependencies": {
+        "@rollup/plugin-typescript": "^8.5.0",
         "rollup-plugin-postcss": "^4.0.2"
     }
 }
