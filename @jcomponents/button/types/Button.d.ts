@@ -7,10 +7,14 @@ declare module '@jcomponents/button' {
     
     const Button: ButtonT;
     export default Button;
-    export const Btn: ButtonT;
+    export const Btn: ButtonT; //alias btn=button
     export const ButtonIcon: ButtonT;
     export const BtnIcon: ButtonT;
 
     export const ButtonIconStyle: React.CSSProperties;
     export const BtnIconStyle: React.CSSProperties;
+
+
+    export const PuffyButton: HTMLButtonElement;
+    export const PuffyBtn: HTMLButtonElement;
 }

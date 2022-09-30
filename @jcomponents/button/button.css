@@ -1,3 +1,4 @@
+/*# Button */
 .jcomponent-button {
     border: 1.1px solid #000;
     border-radius: 3px;
@@ -29,3 +30,26 @@
 .jcomponent-button.jyellow{ background-color: #ffd472; }
 .jcomponent-button.jgreen { background-color: #90ee90; }
 .jcomponent-button.jblue  { background-color: #aed8fc; }
+
+
+/*# Puffy Button */
+
+.jcomponents-puffy-button {
+    background-color: #1a2df3;
+    color: #fff;
+    border-width: 0;
+    border-radius: 4px;
+    padding: 7px 11px;
+    box-shadow: 1px 2px 3px 0px rgb(144, 144, 144, 46%);
+    transition: background-color .3s;
+    font-weight: 600;
+}
+
+.jcomponents-puffy-button:hover {
+    background-color: #0F63FF;
+}
+
+.jcomponents-puffy-button:disabled {
+    background-color: rgb(144, 144, 144, 0.37);
+}
+

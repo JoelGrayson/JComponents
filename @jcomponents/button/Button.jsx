@@ -18,8 +18,8 @@ export default function Button({children, color=null, ...props}) {
         {children}
     </button>);
 }
+export const Btn=Button; //aliases where btn=button
 
-export const Btn=Button; //alias to Button
 
 export function ButtonIcon({children, color, ...props}) { //use in conjunction with ButtonIconStyle
     return (<Button
@@ -39,4 +39,12 @@ export const ButtonIconStyle={height: 40, maxWidth: 100};
 
 export const BtnIcon=ButtonIcon;
 export const BtnIconStyle=ButtonIconStyle;
+
+
+
+export function PuffyButton({children, ...props}) {
+    return <button className='jcomponents-puffy-button' {...props}>{children}</button>;
+}
+
+export const PuffyBtn=PuffyButton;
 
