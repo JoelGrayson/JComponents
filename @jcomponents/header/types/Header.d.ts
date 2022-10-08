@@ -1,6 +1,8 @@
 declare module '@jcomponents/header' {
-    export default function Header({ maxWidth, ...props }: {
+    import React from 'react';
+    
+    export default function Header({ maxWidth=800, ...props }: {
         maxWidth?: number;
-        [x: string]: any;
+        [key: string]: any;
     }): JSX.Element
 }

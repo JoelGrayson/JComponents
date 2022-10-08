@@ -46,6 +46,7 @@ export default [
 }
 ]
 """ > rollup.config.js &&
+npm i typescript
 npm i -D react react-dom @rollup/plugin-babel rollup-plugin-peer-deps-external @rollup/plugin-node-resolve @rollup/plugin-commonjs rollup-plugin-terser @babel/preset-react rollup-plugin-postcss
 
 if type "jq" > /dev/null; then
