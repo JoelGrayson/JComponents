@@ -2,13 +2,13 @@ import React, { Component, CSSProperties } from 'react';
 import PuffyButton from './PuffyButton';
 import './button.css';
 
-export type ButtonProps={
+type ButtonProps={
     children?: any;
     color?: any;
     [key: string]: any;
 };
 
-export type jcolor='jred' | 'jyellow' | 'jgreen' | 'jblue';
+type jcolor='jred' | 'jyellow' | 'jgreen' | 'jblue';
 const validJColors: jcolor[]=['jred', 'jyellow', 'jgreen', 'jblue'];
 
 export default class Button extends Component<ButtonProps> {
