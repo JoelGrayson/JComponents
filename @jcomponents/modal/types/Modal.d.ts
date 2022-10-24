@@ -3,9 +3,9 @@ declare module '@jcomponents/modal' {
 
     export default function Modal(props: {
         open: boolean;
-        setOpen: Function;
-        children: any;
-        opacity: number | undefined;
+        setOpen?: Function;
+        children?: any;
+        opacity?: number;
         [x: string]: any
     }): JSX.Element;
 }
