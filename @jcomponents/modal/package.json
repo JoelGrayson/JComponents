@@ -1,8 +1,9 @@
 {
     "name": "@jcomponents/modal",
-    "version": "1.0.6",
+    "version": "1.0.8",
     "description": "",
     "main": "./dist.js",
+    "types": "./types/Modal.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/JoelGrayson/jcomponents.git"
