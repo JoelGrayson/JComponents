@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@jcomponents/button';
 
-export default class Nav extends React.Component<{ gap: number; [x: string]: any }, any> {
+export default class Nav extends React.Component<{ gap?: number; [x: string]: any }, any> {
     static Item=function(props: {
         children: any;
         href?: string;

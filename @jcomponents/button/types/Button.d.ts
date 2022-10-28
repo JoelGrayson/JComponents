@@ -7,12 +7,15 @@ declare module '@jcomponents/button' {
     };
     
     export default class Button extends Component<ButtonProps> {
-        render(): JSX.Element
+        render(): JSX.Element;
+
+        /** ClassName for the icon */
+        static Icon: string;
 
         static Puffy: ({children, color='jblue', ...props}: {
             color?: string;
             children?: any;
             [key: string]: any;
-        })=>JSX.Element
+        })=>JSX.Element;
     }
 }

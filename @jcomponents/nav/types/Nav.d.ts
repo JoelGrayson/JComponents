@@ -12,7 +12,7 @@ declare module '@jcomponents/nav' {
     }
 
     export default function Nav({ gap, ...props }: {
-        gap: number;
+        gap?: number;
         [x: string]: any;
     }): JSX.Element
 }
