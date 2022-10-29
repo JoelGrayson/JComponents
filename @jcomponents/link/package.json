@@ -1,9 +1,10 @@
 {
   "name": "@jcomponents/link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist.js",
   "module": "./dist.mjs",
+  "types": "./types/Link.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoelGrayson/jcomponents.git"

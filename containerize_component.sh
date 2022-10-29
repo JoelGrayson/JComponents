@@ -16,8 +16,7 @@ import cjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 
-export default [
-{
+export default [{
     input: '$u_filename',
     output: [
         {
@@ -43,8 +42,7 @@ export default [
         cjs(),
         terser()
     ]
-}
-]
+}];
 """ > rollup.config.js &&
 npm i typescript
 npm i -D react react-dom @rollup/plugin-babel rollup-plugin-peer-deps-external @rollup/plugin-node-resolve @rollup/plugin-commonjs rollup-plugin-terser @babel/preset-react rollup-plugin-postcss
