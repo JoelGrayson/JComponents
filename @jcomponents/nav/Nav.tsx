@@ -9,14 +9,14 @@ export default class Nav extends React.Component<{ gap?: number; [x: string]: an
         [key: string]: any;
     }) {
         const [isCurrentPage, setIsCurrentPage] = useState(false);
-        const href=props.href ?? '#'
-        const Link=props.Link ?? null
+        const href=props.href ?? '#';
+        const Link=props.Link ?? null;
 
         useEffect(()=>{
             if (typeof window!=='undefined')
                 setIsCurrentPage(href===window.location.pathname);
         }, []);
-        
+
         if (!Link)
             return (<li style={{padding: 0, listStyleType: 'none'}}>
                 <a href={href}>
@@ -25,7 +25,7 @@ export default class Nav extends React.Component<{ gap?: number; [x: string]: an
             </li>);
         else
             return (<li style={{padding: 0, listStyleType: 'none'}}>
-                <Link href={href}><a>
+                <Link href={href}><a className='unstyled'>
                     <Button color={isCurrentPage ? 'jyellow' : ''}>{props.children}</Button>
                 </a></Link>
             </li>);
@@ -45,10 +45,3 @@ export default class Nav extends React.Component<{ gap?: number; [x: string]: an
         </nav>);
     }
 }
-
-/*
-<Nav>
-    <Nav.Item>Hi</Nav.Item>
-    ...
-</Nav>
-*/
