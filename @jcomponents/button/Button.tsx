@@ -1,25 +1,24 @@
-import React, { Component, CSSProperties } from 'react';
+import React, { Component, CSSProperties, createRef, RefObject } from 'react';
 import PuffyButton from './PuffyButton';
+import { ButtonProps } from './types/ButtonProps';
 import './button.css';
-
-type ButtonProps={
-    children?: any;
-    color?: any;
-    [key: string]: any;
-};
 
 type jcolor='jred' | 'jyellow' | 'jgreen' | 'jblue';
 const validJColors: jcolor[]=['jred', 'jyellow', 'jgreen', 'jblue'];
 
 export default class Button extends Component<ButtonProps> {
+    buttonRef: RefObject<HTMLButtonElement>;
+
     constructor(props) {
         super(props);
+
+        this.buttonRef=createRef();
     }
 
     render() { // Regular <Button>
         const hasButtonIcon: boolean=(()=>{ //one of the children has a this.Icon class
             let triggered=false; //triggered output
-            function traverse(el) {
+            function traverse(el: any) {
                 if (el instanceof Array) //array of els -> traverse through each
                     el.forEach(traverse);
                 else { //single el
@@ -44,10 +43,17 @@ export default class Button extends Component<ButtonProps> {
             style.gap=10;
         }
 
+        // Copy
+        const onClickHandler: (e: any)=>void=()=>this.props.copy
+            ? window.navigator.clipboard.writeText(this.props.copy) //if string exists, copy handler
+            : ()=>{}; //do nothing if false
+
         return (<button
             {...this.props}
             style={{...(this.props?.style), ...style}} //allow user to input styles
             className={validJColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button'}
+            ref={this.buttonRef}
+            onClick={onClickHandler}
         >
             {this.props.children}
         </button>);
