@@ -1,4 +1,4 @@
-.modal-background {
+.jcomponents__modal-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,7 +8,7 @@
     z-index: 1;
 }
 
-.modal-container {
+.jcomponents__modal-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
     transition: none;
 }
 
-.settings-modal {
+.jcomponents__modal {
     position: relative;
     width: 80%;
     height: fit-content;
@@ -30,11 +30,10 @@
     padding-bottom: 40px;
     border-radius: 1.4rem;
 }
+.jcomponents__modal:hover { cursor: grab; }
+.jcomponents__modal:active { cursor: grabbing; }
 
-.settings-modal:hover { cursor: grab; }
-.settings-modal:active { cursor: grabbing; }
-
-.settings-modal-content {
+.jcomponents__modal-content {
     cursor: default;
+    overflow-wrap: anywhere;
 }
-

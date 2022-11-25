@@ -38,11 +38,11 @@ export default function Modal({open, setOpen, children, opacity=0.5, ...props}) 
     
     return (<>
         { open && (<>
-            <div className='modal-background' style={{
+            <div className='jcomponents__modal-background' style={{
                 backgroundColor: `rgba(0.1, 0.1, 0.1, ${opacity})`
             }} onClick={_=>setOpen(false)}/> {/* Clicking outside of a modal closes it */}
-            <div className='modal-container'>
-                <div className='settings-modal'
+            <div className='jcomponents__modal-container'>
+                <div className='jcomponents__modal'
                     style={{
                         maxWidth: props.maxWidth || "500px",
                         top: `${offset.y}px`,
@@ -51,7 +51,7 @@ export default function Modal({open, setOpen, children, opacity=0.5, ...props}) 
                     onMouseDown={_=>document.addEventListener('mousedown', mouseDownListener)}
                 >
                     <span className='icon-close' onClick={_=>setOpen(false)} />
-                    <div className='settings-modal-content' onClick={e=>e.stopPropagation()} >
+                    <div className='jcomponents__modal-content' onClick={e=>e.stopPropagation()} >
                         {children}
                     </div>
                 </div>
