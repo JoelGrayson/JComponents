@@ -1,4 +1,4 @@
-import React, { Component, CSSProperties, createRef, RefObject } from 'react';
+import React, { Component, CSSProperties, createRef, RefObject, MouseEvent as ReactMouseEvent } from 'react';
 import PuffyButton from './PuffyButton';
 import { ButtonProps } from './types/ButtonProps';
 import './button.css';
@@ -6,7 +6,7 @@ import './button.css';
 type jcolor='jred' | 'jyellow' | 'jgreen' | 'jblue';
 const validJColors: jcolor[]=['jred', 'jyellow', 'jgreen', 'jblue'];
 
-export default class Button extends Component<ButtonProps> {
+export default class Button extends Component<ButtonProps, {}> {
     buttonRef: RefObject<HTMLButtonElement>;
 
     constructor(props) {
@@ -44,9 +44,11 @@ export default class Button extends Component<ButtonProps> {
         }
 
         // Copy
-        const onClickHandler: (e: any)=>void=()=>this.props.copy
-            ? window.navigator.clipboard.writeText(this.props.copy) //if string exists, copy handler
-            : ()=>{}; //do nothing if false
+        const onClickHandler=(e: ReactMouseEvent<HTMLButtonElement, MouseEvent>)=>{
+            if (this.props.copy)
+                window.navigator.clipboard.writeText(this.props.copy); //if string exists, copy handler
+            this.props.onClick?.(e); //execute user's onClick handler as well
+        }
 
         return (<button
             {...this.props}

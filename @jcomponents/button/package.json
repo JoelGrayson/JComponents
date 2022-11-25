@@ -1,6 +1,6 @@
 {
     "name": "@jcomponents/button",
-    "version": "1.2.17",
+    "version": "1.2.19",
     "description": "",
     "main": "./dist.js",
     "module": "./dist.mjs",

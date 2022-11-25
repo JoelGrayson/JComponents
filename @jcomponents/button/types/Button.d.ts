@@ -1,19 +1,18 @@
 // @ts-check
 
 declare module '@jcomponents/button' {
-    import { Component } from 'react';
+    import React from 'react';
 
-    export type ButtonProps={ // ./ButtonProps.d.ts
+    export interface ButtonProps extends React.HTMLProps<HTMLButtonElement> { // Copied from ./ButtonProps.d.ts
         children?: any;
         color?: any;
         /**
          * @description Text to be copied when button clicked
          */
         copy?: string | undefined | null;
-        [key: string]: any;
-    };
+    }
 
-    export default class Button extends Component<ButtonProps> {
+    export default class Button extends React.Component<ButtonProps> {
         render(): JSX.Element;
 
         /** ClassName for the icon */
