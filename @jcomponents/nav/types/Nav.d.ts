@@ -6,13 +6,9 @@ declare module '@jcomponents/nav' {
             [key: string]: any;
             children: any;
             href?: string | undefined;
+            target?: '_blank' | '_self' | '_parent' | '_top' | string;
             Link?: any;
         }) => JSX.Element;
         render(): JSX.Element;
     }
-
-    export default function Nav({ gap, ...props }: {
-        gap?: number;
-        [x: string]: any;
-    }): JSX.Element
 }
