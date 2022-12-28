@@ -34,8 +34,7 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
-        "rollup": "rollup -c",
-        "jpublish": "npm run rollup && npm publish"
+        "rollup": "rollup -c"
     },
     "dependencies": {
         "typescript": "^4.8.4"

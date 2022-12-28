@@ -19,8 +19,7 @@
     "access": "public"
   },
   "scripts": {
-    "rollup": "rollup -c",
-    "jpublish": "npm run rollup && npm publish"
+    "rollup": "rollup -c"
   },
   "peerDependencies": {
     "react": "^18.2.0",
