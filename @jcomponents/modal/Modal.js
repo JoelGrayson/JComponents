@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './modal.css';
 import './icon-close.css';
 
-export default function Modal({open, setOpen, children, opacity=0.5, ...props}) {
+export default function Modal({open, setOpen, children, opacity=0.5, width, ...props}) {
     // <Moving>
     const [startingCursorPos, setStartingCursorPos]=useState({x: null, y: null}); //starting position when mouseDown
     const [cursorPos, setCursorPos]=useState({x: null, y: null}); //cursor's position
@@ -44,7 +44,8 @@ export default function Modal({open, setOpen, children, opacity=0.5, ...props}) 
             <div className='jcomponents__modal-container'>
                 <div className='jcomponents__modal'
                     style={{
-                        maxWidth: props.maxWidth || "500px",
+                        maxWidth: width ? 'none' : props.maxWidth || "500px", //use width or maxWidth or 500px
+                        width: width || 'auto',
                         top: `${offset.y}px`,
                         left: `${offset.x}px`,
                     }}

@@ -6,6 +6,8 @@ declare module '@jcomponents/modal' {
         setOpen?: Function;
         children?: any;
         opacity?: number;
+        width?: string | number;
+        maxWidth?: false | string | number;
         [x: string]: any
     }): JSX.Element;
 }
