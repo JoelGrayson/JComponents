@@ -35,6 +35,13 @@ export default function Modal({open, setOpen, children, opacity=0.5, width, ...p
         document.removeEventListener('mousedown', mouseDownListener);
     }
     // </>
+
+    // Escape keyboard listener
+    const closeModalOnEscapeKey=e=>e.key==='Escape' && setOpen(false);
+    useEffect(()=>{
+        document.addEventListener('keydown', closeModalOnEscapeKey);
+        return ()=>document.removeEventListener('keydown', closeModalOnEscapeKey); //component unmounting
+    }, []);
     
     return (<>
         { open && (<>
