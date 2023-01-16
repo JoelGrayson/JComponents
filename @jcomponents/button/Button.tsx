@@ -7,12 +7,8 @@ type jcolor='jred' | 'jyellow' | 'jgreen' | 'jblue';
 const validJColors: jcolor[]=['jred', 'jyellow', 'jgreen', 'jblue'];
 
 export default class Button extends Component<ButtonProps, {}> {
-    buttonRef: RefObject<HTMLButtonElement>;
-
     constructor(props) {
         super(props);
-
-        this.buttonRef=createRef();
     }
 
     render() { // Regular <Button>
@@ -42,26 +38,39 @@ export default class Button extends Component<ButtonProps, {}> {
             style.cursor='pointer';
             style.gap=10;
         }
+        switch (this.props.size) {
+            case 'small':
+                style.padding='0px 3px';
+                style.fontSize='0.8em';
+                break;
+            case 'normal':
+                style.padding='2px 7px';
+                break;
+            case 'large':
+                style.padding='5px 10px';
+                break;
+            default:
+                style.padding='2px 7px';
+        }
 
         // Copy
         const onClickHandler=(e: ReactMouseEvent<HTMLButtonElement, MouseEvent>)=>{
             if (this.props.copy)
                 window.navigator.clipboard.writeText(this.props.copy); //if string exists, copy handler
             this.props.onClick?.(e); //execute user's onClick handler as well
-        }
+        };
 
-        return (<button
+        return <button
             {...this.props}
             style={{...(this.props?.style), ...style}} //allow user to input styles
             className={validJColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button'}
-            ref={this.buttonRef}
             onClick={onClickHandler}
         >
             {this.props.children}
-        </button>);
+        </button>;
     }
 
-    static Icon: string='jcomponents__button__icon'; // Button.Icon is a className
+    static readonly Icon: string='jcomponents__button__icon'; // Button.Icon is a className
 
     // <Button.Puffy> is an element
     static Puffy=PuffyButton;
