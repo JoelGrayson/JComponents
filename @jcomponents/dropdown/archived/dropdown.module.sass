@@ -1,0 +1,39 @@
+// For dropdown components (account in header & institution selector in sidebar)
+
+.visible-dropdown, .hidden-dropdown
+    cursor: pointer
+    position: relative
+    background-color: #ffd472
+    &:hover
+        background-color: #f0c35b
+    &:active
+        background-color: #e0b142
+
+.visible-dropdown //always shown
+    border: 1px solid black
+    padding: .3rem 1rem
+    border-radius: .2rem
+    display: flex
+    align-items: center
+    gap: 1ch
+
+.hidden-dropdown //until opened
+    position: absolute
+    top: 2rem
+    left: 3px
+    display: flex
+    flex-direction: column
+    background-color: white
+
+.list-item //list item
+    width: 100%
+    border: 1px solid black
+    padding: .3rem .8rem
+    display: flex
+    gap: 1ch
+    background-color: #fefefe
+    &:hover
+        background-color: #eee
+    &:active
+        background-color: #ddd
+
