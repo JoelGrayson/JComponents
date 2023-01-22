@@ -1,7 +1,8 @@
 import React from 'react';
-declare function Dropdown({ title, children, openTitleWidth, closedTitleWidth, className, onClick, onChange, absoluteWhenOpen, width, ...props }: Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> & {
+declare function Dropdown(props: Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> & {
     title?: any;
     children?: any;
+    color?: string;
     openTitleWidth?: any;
     closedTitleWidth?: any;
     className?: string;

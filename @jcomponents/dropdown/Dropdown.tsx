@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/css';
+import jcolorize from './jcolorize';
 
 // documentation: onChange, title
 
-export default function Dropdown({ title, children, openTitleWidth, closedTitleWidth, className, onClick, onChange, absoluteWhenOpen, width, ...props }: Omit<React.HTMLAttributes<HTMLDivElement>, 'title' | 'onChange'> & { title?: any; children?: any; openTitleWidth?: any; closedTitleWidth?: any; className?: string; onClick?: any; onChange?: (newValue: boolean)=>void; absoluteWhenOpen?: boolean; width?: any }, ref: any) { // if value is defined, changes value when dropdown selected changes. if no value and no setValue, title is not changed
+export default function Dropdown({ title, children, color='#ffd472', openTitleWidth, closedTitleWidth, className, onClick, onChange, absoluteWhenOpen, width, ...props }: Omit<React.HTMLAttributes<HTMLDivElement>, 'title' | 'onChange'> & { title?: any; children?: any; color?: string; openTitleWidth?: any; closedTitleWidth?: any; className?: string; onClick?: any; onChange?: (newValue: boolean)=>void; absoluteWhenOpen?: boolean; width?: any }, ref: any) { // if value is defined, changes value when dropdown selected changes. if no value and no setValue, title is not changed
     // <Clicking outside closes dropdown
     const [open, _setOpen]=useState<boolean>(false);
-    function closeDropdown() {
-        setOpen(false);
-    }
-    function closeDropdownOnEscape(e: any) {
-        if (e.key==='Escape')
-            closeDropdown();
-    }
+    const closeDropdown=()=>setOpen(false);
+    const closeDropdownOnEscape=(e: any)=>(e.key==='Escape') && closeDropdown();
+
     function setOpen(newValue: boolean) {
         _setOpen(newValue);
         if (onChange)
@@ -49,13 +46,9 @@ export default function Dropdown({ title, children, openTitleWidth, closedTitleW
         
             cursor: pointer;
             position: ${absoluteWhenOpen ? 'absolute !important' : 'relative'};
-            background-color: #ffd472;
-            &:hover {
-                background-color: #f0c35b;
-            }
-            &:active {
-                background-color: #e0b142;
-            }
+            background-color: ${jcolorize(color)};
+            &:hover { filter: brightness(0.85) saturate(1.4); }
+            &:active { filter: brightness(0.8) saturate(1.4); }
         `}>
             <span className={css`
                 overflow: hidden;
@@ -72,13 +65,7 @@ export default function Dropdown({ title, children, openTitleWidth, closedTitleW
         { open && <div className={css`
             cursor: pointer;
             position: absolute;
-            background-color: #ffd472;
-            &:hover {
-                background-color: #f0c35b;
-            }
-            &:active {
-                background-color: #e0b142;
-            } 
+            background-color: ${jcolorize(color)};
 
             top: 2rem;
             left: 3px;
@@ -91,20 +78,16 @@ export default function Dropdown({ title, children, openTitleWidth, closedTitleW
     </div>;
 }
 
-function DropdownItem({ children, className, ...props }: { children?: any; className?: string } & React.HTMLAttributes<HTMLDivElement>, ref: any) {
+function DropdownItem({ children, className, color='#fefefe', ...props }: { children?: any; className?: string; color?: string; } & React.HTMLAttributes<HTMLDivElement>, ref: any) {
     return <div className={`${css`
         width: 100%;
         border: 1px solid black;
         padding: .3rem .8rem;
         display: flex;
         gap: 1ch;
-        background-color: #fefefe;
-        &:hover {
-            background-color: #eee;
-        }
-        &:active {
-            background-color: #ddd;
-        }
+        background-color: ${jcolorize(color)};
+        &:hover { filter: brightness(0.85) saturate(1.4); }
+        &:active { filter: brightness(0.8) saturate(1.4); }
     `} ${className}`} {...props}>
         {children}
     </div>;
