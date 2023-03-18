@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # About: run this script to quickly turn a single file into a React component
-# Example: ./containerize_component.sh ./jcomponents/button Button.js
+# Example: ./containerize_component.sh ./button Button.js
 
 # Arguments
 u_path="$1"
@@ -73,7 +73,7 @@ else
         "react-dom": "^18.2.0"
     },
     '''
-    # echo "Please install jq for this to work. You can install from https://stedolan.github.io/jq/"
+    echo "Please install jq for these lines to be automatically inserted for you. You can install from https://stedolan.github.io/jq/"
 fi
 
 npm run rollup

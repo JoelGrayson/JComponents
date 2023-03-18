@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { css } from '@emotion/css';
 import jcolorize from './jcolorize';
 
+
 // documentation: onChange, title
 
 export default function Dropdown({ title, children, color='#ffd472', openTitleWidth, closedTitleWidth, className, onClick, onChange, absoluteWhenOpen, width, ...props }: Omit<React.HTMLAttributes<HTMLDivElement>, 'title' | 'onChange'> & { title?: any; children?: any; color?: string; openTitleWidth?: any; closedTitleWidth?: any; className?: string; onClick?: any; onChange?: (newValue: boolean)=>void; absoluteWhenOpen?: boolean; width?: any }, ref: any) { // if value is defined, changes value when dropdown selected changes. if no value and no setValue, title is not changed
