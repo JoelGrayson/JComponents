@@ -1,9 +1,10 @@
 {
   "name": "@jcomponents/resizer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "./dist.js",
   "module": "./dist.mjs",
+  "types": "./Resizer.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoelGrayson/jcomponents.git"

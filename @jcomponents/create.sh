@@ -5,7 +5,7 @@
 
 cp -r resizer "$1"
 mv "$1"/resizer.tsx "$1"/"$1".tsx
-rm "$1/dist.js" "$1/dist.mjs"
+rm "$1/dist.js" "$1/dist.mjs" "$1/Resizer.d.ts"
 
 echo """
 # Steps to Do:

@@ -24,7 +24,9 @@ export default [
             postcss({
                 minimize: true
             }),
-            typescript(),
+            typescript({
+                outDir: '.'
+            }),
             babel({
                 babelHelpers: 'bundled',
                 exclude: 'node_modules',
