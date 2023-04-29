@@ -5,7 +5,7 @@ export default class Nav extends React.Component<{ gap?: number; [x: string]: an
     render(): JSX.Element { //<Nav>
         const gap=this.props.gap ?? 4;
         
-        return (<nav>
+        return <nav>
             <ul style={{
                 display: 'flex',
                 padding: 0,
@@ -13,7 +13,7 @@ export default class Nav extends React.Component<{ gap?: number; [x: string]: an
             }}>
                 {this.props.children}
             </ul>
-        </nav>);
+        </nav>;
     }
 
     static Item=function({children, href='#', target, ...props}: { //<Nav.Item>
@@ -29,10 +29,10 @@ export default class Nav extends React.Component<{ gap?: number; [x: string]: an
                 setBtnColor('jyellow');
         }, []);
         
-        return (<li style={{padding: 0, listStyleType: 'none'}}>
+        return <li style={{padding: 0, listStyleType: 'none'}}>
             <a className='unstyled' href={href} target={target} {...props}>
                 <Button color={btnColor}>{children}</Button>
             </a>
-        </li>);
+        </li>;
     }
 }

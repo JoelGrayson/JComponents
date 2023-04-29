@@ -6,10 +6,12 @@
 cp -r resizer "$1"
 mv "$1"/resizer.tsx "$1"/"$1".tsx
 rm "$1/dist.js" "$1/dist.mjs" "$1/Resizer.d.ts"
+rm -rf "$1/node_modules"
+npm i
 
-echo """
+echio """
 # Steps to Do:
-- [ ] Change \`package.json\`
+- [ ] Change \`package.json\` name and types
 - [ ] Change \`rollup.config.js\` to the correct filename
 - [ ] Write your component in \`$1.tsx\`
 

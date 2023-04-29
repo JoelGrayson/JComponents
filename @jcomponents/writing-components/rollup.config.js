@@ -8,7 +8,7 @@ import postcss from 'rollup-plugin-postcss';
 
 export default [
     {
-        input: 'Nav.tsx',
+        input: 'writing-components.tsx',
         output: [
             {
                 file: './dist.mjs',
@@ -24,13 +24,14 @@ export default [
             postcss({
                 minimize: true
             }),
-            typescript(),
+            typescript({
+                outDir: '.'
+            }),
             babel({
                 babelHelpers: 'bundled',
                 exclude: 'node_modules',
                 presets: ['@babel/preset-react' ],
-                extensions: ['.js', '.jsx', '.es6', '.es', '.mjs',
-                    '.ts', '.tsx']
+                extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx']
             }),
             external(),
             resolve(),
@@ -38,5 +39,4 @@ export default [
             terser()
         ]
     }
-]
-
+];

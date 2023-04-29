@@ -3,7 +3,7 @@ declare module '@jcomponents/header' {
     
     export default function Header({ maxWidth=800, color, ...props }: {
         maxWidth?: number | 'none';
-        color: string | { from: string; to: string; };
+        color?: string | { from: string; to: string; };
         [key: string]: any;
     }): JSX.Element
 }
