@@ -1,6 +1,4 @@
 import React from 'react';
-import Latex from 'react-latex';
-import 'katex/dist/katex.min.css';
 
 export function Citation({number}: { number: string | number }) {
     return <a href={`#footnote-${number}`} className='text-blue-700'>
@@ -47,10 +45,6 @@ export function H2({children, ...props}: any) {
         marginTop: '8px',
         marginBottom: '10px'
     }} {...props}>{children}</h2>;
-}
-
-export function TeX({children}: {children: string}) { //Usage: <TeX>{String.raw``}</TeX>
-    return <Latex>{`$$${children}$$`}</Latex>;
 }
 
 export function HangingIndent({children}: {children: any}) {

@@ -12,6 +12,7 @@ npm i
 echio """
 # Steps to Do:
 - [ ] Change \`package.json\` name and types
+- [ ] \`ncu -u && npm i\`
 - [ ] Change \`rollup.config.js\` to the correct filename
 - [ ] Write your component in \`$1.tsx\`
 
