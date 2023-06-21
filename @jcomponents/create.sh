@@ -9,11 +9,12 @@ rm "$1/dist.js" "$1/dist.mjs" "$1/Resizer.d.ts"
 rm -rf "$1/node_modules"
 npm i
 
-echio """
+echo """
 # Steps to Do:
-- [ ] Change \`package.json\` name and types
+- [ ] Change \`package.json\` name and types properties
 - [ ] \`ncu -u && npm i\`
-- [ ] Change \`rollup.config.js\` to the correct filename
+- [ ] Change \`rollup.config.js\`'s input file to the correct filename
 - [ ] Write your component in \`$1.tsx\`
 
-"""
+""" | glow
+
