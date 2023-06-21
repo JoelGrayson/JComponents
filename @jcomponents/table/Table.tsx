@@ -14,18 +14,14 @@ export default function Table({ children }: { children: any }) {
             padding: 2px 7px;
         }
 
-        td {
-            background-color: #fff;
-        }
-        
         th {
-            background-color: #f2f2f2;
+            background-color:rgba(0, 0, 0, 0.1);
             font-weight: bold;
         }
         
         td:hover {
             transition-duration: 0s;
-            background-color: #eee;
+            background-color: rgba(0, 0, 0, 0.3); //darken whatever the base color is
         }
     `}>
         {children}
