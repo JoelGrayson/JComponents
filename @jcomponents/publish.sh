@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# ABOUT: Updates version and publishes to the npm registry
-# Usage: ./publish.sh nav
+instructions='ABOUT: Updates version and publishes to the npm registry
+Usage: ./publish.sh nav'
+
+[ -z "$1" ] && echo "$instructions" && exit 1
 
 cd "$1"
 
