@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 const poleWidth=5;
 const poleLeftOffset=3;
 
-export default function Flag({ src, selected, size=141, ...props }: { src: string; selected: boolean; size?: number; [key: string]: any }) {
+export default function Flag({ src, size=141, ...props }: { src: string; size?: number; [key: string]: any }) {
     const canvasRef=useRef<HTMLCanvasElement>(null);
 
     useEffect(()=>{
@@ -56,12 +56,8 @@ export default function Flag({ src, selected, size=141, ...props }: { src: strin
             borderTopLeftRadius: '15px',
             borderTopRightRadius: '15px',
             paddingBottom: '0',
-            borderTop: selected ? '1px solid black' : '1px solid transparent',
-            borderRight: selected ? '1px solid black' : '1px solid transparent',
-            borderLeft: selected ? '1px solid black' : '1px solid transparent',
-            borderBottom: 'none',
-            backgroundColor: selected ? 'white' : undefined,
-            zIndex: 1
+            zIndex: 1,
+            ...props.style
         }}
         width={size+2*poleWidth+poleLeftOffset} height={size*.85}
         ref={canvasRef} {...props}
