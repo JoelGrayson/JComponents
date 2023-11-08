@@ -8,6 +8,7 @@ declare module '@jcomponents/modal' {
         opacity?: number;
         width?: string | number;
         maxWidth?: false | string | number;
+        unclosable?: boolean;
         [x: string]: any
     }): JSX.Element;
 }

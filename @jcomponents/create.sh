@@ -17,6 +17,7 @@ echo """
 - [ ] \`ncu -u && npm i\`
 - [ ] Change \`rollup.config.js\`'s input file to the correct filename
 - [ ] Write your component in \`$1.tsx\`
+- [ ] Create \`$1.d.ts\` with the type signatures
 
 """ | glow
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './modal.css';
 import './icon-close.css';
 
-export default function Modal({open, setOpen, children, opacity=0.5, width, ...props}) {
+export default function Modal({open, setOpen, children, opacity=0.5, width, unclosable=false, ...props}) {
     // <Moving>
     const [startingCursorPos, setStartingCursorPos]=useState({x: null, y: null}); //starting position when mouseDown
     const [cursorPos, setCursorPos]=useState({x: null, y: null}); //cursor's position
@@ -37,7 +37,8 @@ export default function Modal({open, setOpen, children, opacity=0.5, width, ...p
     // </>
 
     // Escape keyboard listener
-    const closeModalOnEscapeKey=e=>e.key==='Escape' && setOpen(false);
+    const onlySetOpenIfNotUnclosable=()=>!unclosable && setOpen(false);
+    const closeModalOnEscapeKey=e=>e.key==='Escape' && onlySetOpenIfNotUnclosable(false);
     useEffect(()=>{
         document.addEventListener('keydown', closeModalOnEscapeKey);
         return ()=>document.removeEventListener('keydown', closeModalOnEscapeKey); //component unmounting
@@ -47,7 +48,7 @@ export default function Modal({open, setOpen, children, opacity=0.5, width, ...p
         { open && (<>
             <div className='jcomponents__modal-background' style={{
                 backgroundColor: `rgba(0.1, 0.1, 0.1, ${opacity})`
-            }} onClick={_=>setOpen(false)}/> {/* Clicking outside of a modal closes it */}
+            }} onClick={_=>onlySetOpenIfNotUnclosable(false)}/> {/* Clicking outside of a modal closes it */}
             <div className='jcomponents__modal-container'>
                 <div className='jcomponents__modal'
                     style={{
@@ -58,7 +59,7 @@ export default function Modal({open, setOpen, children, opacity=0.5, width, ...p
                     }}
                     onMouseDown={_=>document.addEventListener('mousedown', mouseDownListener)}
                 >
-                    <span className='icon-close' onClick={_=>setOpen(false)} />
+                    { !unclosable && <span className='icon-close' onClick={_=>onlySetOpenIfNotUnclosable(false)} /> }
                     <div className='jcomponents__modal-content' onClick={e=>e.stopPropagation()} >
                         {children}
                     </div>
