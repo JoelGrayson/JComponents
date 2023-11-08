@@ -51,6 +51,9 @@ export default function Flag({ src, size=141, ...props }: { src: string; size?: 
     }, [src]);
     
     return <canvas
+        width={size+2*poleWidth+poleLeftOffset} height={size*.85}
+        ref={canvasRef}
+        {...props}
         style={{
             padding: '30px 33px',
             borderTopLeftRadius: '15px',
@@ -59,8 +62,6 @@ export default function Flag({ src, size=141, ...props }: { src: string; size?: 
             zIndex: 1,
             ...props.style
         }}
-        width={size+2*poleWidth+poleLeftOffset} height={size*.85}
-        ref={canvasRef} {...props}
     />;
 }
 
