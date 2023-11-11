@@ -6,7 +6,8 @@
   "module": "./dist.mjs",
   "types": "./types/Header.d.ts",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "local-test": "npm run rollup && npm link"
   },
   "dependencies": {
     "tinycolor2": "^1.4.2",

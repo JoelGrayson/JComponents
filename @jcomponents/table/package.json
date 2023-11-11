@@ -20,7 +20,8 @@
   },
   "scripts": {
     "rollup": "rollup -c",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "local-test": "npm run rollup && npm link"
   },
   "peerDependencies": {
     "react": "^18.2.0",

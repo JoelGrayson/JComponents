@@ -35,6 +35,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "local-test": "rollup -c && node test.js"
   }
 }

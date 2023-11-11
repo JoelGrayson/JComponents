@@ -10,7 +10,8 @@
     "url": "git+https://github.com/JoelGrayson/jcomponents.git"
   },
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "local-test": "npm run rollup && npm link"
   },
   "author": "Joel Grayson <joel@joelgrayson.com> (https://github.com/JoelGrayson)",
   "license": "MIT",

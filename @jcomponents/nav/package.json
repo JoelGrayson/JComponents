@@ -19,7 +19,8 @@
     "access": "public"
   },
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "local-test": "npm run rollup && npm link"
   },
   "peerDependencies": {
     "react": "^18.2.0",

@@ -34,7 +34,8 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "local-test": "npm run rollup && npm link"
   },
   "dependencies": {
     "jcolorize": "^1.0.0",
