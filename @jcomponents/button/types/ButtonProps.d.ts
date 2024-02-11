@@ -1,7 +1,7 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    children?: any;
+export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> { // Copied from ./ButtonProps.d.ts
+children?: any;
     /**
      * @description Color of button. Can be 'jred' | 'jyellow' | 'jgreen' | 'jblue' or any other valid HTML button color
      */
@@ -9,7 +9,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     /**
      * @description Size of button
      */
-    size?: 'normal' | 'large' | 'small';
+    jsize?: 'normal' | 'large' | 'small';
     /**
      * @description Text to be copied when button clicked
      */

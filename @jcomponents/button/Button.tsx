@@ -38,7 +38,7 @@ export default class Button extends Component<ButtonProps, {}> {
             style.cursor='pointer';
             style.gap=10;
         }
-        switch (this.props.size) {
+        switch (this.props.jsize) {
             case 'small':
                 style.padding='0px 3px';
                 style.fontSize='0.8em';
@@ -59,12 +59,13 @@ export default class Button extends Component<ButtonProps, {}> {
                 window.navigator.clipboard.writeText(this.props.copy); //if string exists, copy handler
             this.props.onClick?.(e); //execute user's onClick handler as well
         };
-
+        
         return <button
             {...this.props}
             style={{...(this.props?.style), ...style}} //allow user to input styles
             className={(validJColor ? `jcomponents__button ${this.props.color}` : 'jcomponents__button')+' '+this.props.className}
             onClick={onClickHandler}
+            type='button'
         >
             {this.props.children}
         </button>;
