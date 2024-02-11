@@ -38,7 +38,7 @@ export default class Button extends Component<ButtonProps, {}> {
             style.cursor='pointer';
             style.gap=10;
         }
-        switch (this.props.jsize) {
+        switch (this.props.size) {
             case 'small':
                 style.padding='0px 3px';
                 style.fontSize='0.8em';

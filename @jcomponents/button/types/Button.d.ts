@@ -12,7 +12,7 @@ declare module '@jcomponents/button' {
         /**
          * @description Size of button
          */
-        jsize?: 'normal' | 'large' | 'small';
+        size?: 'normal' | 'large' | 'small';
         /**
          * @description Text to be copied when button clicked
          */
