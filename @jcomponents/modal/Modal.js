@@ -52,8 +52,8 @@ export default function Modal({open, setOpen, children, opacity=0.5, width, uncl
             <div className='jcomponents__modal-container'>
                 <div className='jcomponents__modal'
                     style={{
-                        maxWidth: width ? 'none' : props.maxWidth || "500px", //use width or maxWidth or 500px
-                        width: width || 'auto',
+                        maxWidth: maxWidth || width || 'none',
+                        width: width || 'fit-content',
                         top: `${offset.y}px`,
                         left: `${offset.x}px`,
                     }}

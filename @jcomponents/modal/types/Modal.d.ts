@@ -1,3 +1,4 @@
+/// <reference types="react" />
 declare module '@jcomponents/modal' {
     export default function Modal(props: {
         open: boolean;
