@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function FancyOl({ children, spacing=5, color='white', backgroundColor='#1d2cf3' }: { children: React.ReactNode; spacing?: number; color?: string; backgroundColor?: string }) {
+export default function FancyOl({ children, spacing=5, color='white', backgroundColor='#1d2cf3', showLine=true }: { children: React.ReactNode; spacing?: number; color?: string; backgroundColor?: string; showLine?: boolean }) {
     const childrenArray=React.Children.toArray(children);
 
-    return <div className="grid grid-cols-[32px_1fr]">
+    return <div style={{
+        display: 'grid',
+        gridTemplateColumns: '32px 1fr'
+    }}>
         {childrenArray.map((child, i)=>{
             return <React.Fragment key={i}>
                 <div className="unstyled" style={{ position: 'relative' }}>
@@ -21,9 +24,15 @@ export default function FancyOl({ children, spacing=5, color='white', background
                             backgroundColor,
                         }}
                     >
-                        <span className="relative top-[1px] z-[1]">{i+1}</span>
+                        <span style={{
+                            position: 'relative',
+                            top: 1.5,
+                            zIndex: 1,
+                        }}>{i+1}</span>
+
                         {/* After */}
-                        { i==childrenArray.length-1 && <div
+                        { i!==childrenArray.length-1 && showLine && <div
+                            className="after"
                             style={{
                                 height: '100%',
                                 width: '4px',

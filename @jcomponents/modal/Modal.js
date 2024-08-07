@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './modal.css';
 import './icon-close.css';
 
-export default function Modal({open, setOpen, children, opacity=0.5, width, unclosable=false, ...props}) {
+export default function Modal({open, setOpen, children, opacity=0.5, width, unclosable=false, maxWidth, ...props}) {
     // <Moving>
     const [startingCursorPos, setStartingCursorPos]=useState({x: null, y: null}); //starting position when mouseDown
     const [cursorPos, setCursorPos]=useState({x: null, y: null}); //cursor's position

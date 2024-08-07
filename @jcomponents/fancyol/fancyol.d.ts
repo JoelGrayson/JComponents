@@ -1,9 +1,8 @@
 import React from "react";
-
-export default function FancyOl({ children, spacing, color, backgroundColor }: {
+export default function FancyOl({ children, spacing, color, backgroundColor, showLine }: {
     children: React.ReactNode;
     spacing?: number;
     color?: string;
     backgroundColor?: string;
-}): React.JSX.Element
-
+    showLine?: boolean;
+}): React.JSX.Element;
